@@ -1,0 +1,102 @@
+<div class="wrapper">
+      <form [formGroup]="regValidation" class="details">
+        <div class="title">
+          <h2>Add new item</h2>
+        </div>
+        <div class="form">
+          <label class="title-image">
+            <h5>Product Image</h5>
+
+            <div class="form-group">
+              <input
+                type="file"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+                accept="image/*"
+              />
+            </div>
+
+            <h5>Cover Image</h5>
+
+            <div class="form-group">
+              <input
+                type="file"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+                accept="image/*"
+                required
+              />
+            </div>
+          </label>
+          <input
+            type="text"
+            formControlName="title"
+            class="item-name"
+            required
+            placeholder=" Title"
+          />
+          @if (Title.errors?.["required"]&&Title.touched) {
+          <div>
+            <p class="text-danger">Required</p>
+          </div>
+          }
+          <input
+            type="text"
+            formControlName="description"
+            class="item-description"
+            required
+            placeholder="  Description"
+          />
+          @if (Description.errors?.["required"]&&Description.touched) {
+          <div>
+            <p class="text-danger">Required</p>
+          </div>
+          }
+          <input
+            type="number"
+            formControlName="quantity"
+            min="1"
+            class="price-before-discount"
+            required
+            placeholder=" Quantity"
+          />
+          @if (Quantity.errors?.["required"]&&Quantity.touched) {
+          <div>
+            <p class="text-danger">Required</p>
+          </div>
+          }
+          <input
+            type="number"
+            formControlName="price"
+            required
+            class="item-price"
+            placeholder=" Price "
+          />
+          @if (Price.errors?.["required"]&&Price.touched) {
+          <div>
+            <p class="text-danger">Required</p>
+          </div>
+          }
+          <label for="option">Category</label>
+          <select
+            formControlName="category"
+            required
+            class="rating"
+            class="form-control"
+            id="options"
+          >
+            @for(categor of category ;track categor._id){
+            <option value="{{ categor._id }}">{{ categor.name }}</option>
+            }
+          </select>
+          @if (Category.errors?.["required"]&&Category.touched) {
+          <div>
+            <p class="text-danger">Required</p>
+          </div>
+          }
+          <div class="colors"></div>
+
+          <button (click)="submit()" class="save">Save</button>
+        </div>
+      </form>
+    </div>

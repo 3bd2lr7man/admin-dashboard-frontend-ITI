@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.5.1-web\"> -->
+  </head>
+  <body>
+    <!-- <button class="btn btn-dark" (click)="fire()">fire</button>
+    <div>{{ counter() }}</div> -->
+
+    <!-- @if(true){
+    {{ showSpinner() }}
+    } -->
+    <!-- <button nbButton status="success" (click)="showSpinner()">
+      Start Spinner
+    </button> -->
+    <div class="wrapper">
+      <div class="log">
+        <div class="photo">
+          <i class="icon fa-regular fa-user"></i>
+          <h1>Login</h1>
+          <!-- [class]="nameFeedback?'invalid':'valid'" -->
+        </div>
+        <form [formGroup]="regValidation" class="inputs">
+          <div class="emailInput">
+            <div>
+              <input
+                [class]="emailinput"
+                [class.emailValid]="isEmailValid"
+                formControlName="email"
+                [(ngModel)]="email"
+                placeholder="Email"
+                type="email"
+              />
+            </div>
+            <div class="input-status">
+              <span *ngIf="regValidation.controls.email.valid" class="green">✅</span>
+              <span *ngIf="!regValidation.controls.email.valid && regValidation.controls.email.value" class="red">❌</span>
+            </div>
+            <!-- @if(regValidation.controls["email"].valid){
+                      <div>
+                    <span style="color: green;" class="emailSpan" >success</span>
+                     </div>}
+                    else{} -->
+            <!-- <div>
+                        <p style="color: red;">Name required</p>
+                      </div> -->
+          </div>
+
+          <div class="passwordInput">
+            <input
+              [class]="passwordinput"
+              formControlName="password"
+              [(ngModel)]="password"
+              placeholder="Password"
+              type="password"
+            />
+            <div class="input-status">
+              <span *ngIf="regValidation.controls.password.valid" class="green">✅</span>
+              <span *ngIf="!regValidation.controls.password.valid && regValidation.controls.password.value" class="red">❌</span>
+            </div>
+          </div>
+          
+        </form>
+
+        <button type="submit" (click)="login()">Login</button>
+        <button class="forget" routerLink="/ForgetPassword">
+          Forget Password?
+        </button>
+
+        <button routerLink="/regester" class="btn btn-outline-dark">
+          Creat New Acount
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/f28bbb902b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

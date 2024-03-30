@@ -1,0 +1,83 @@
+<!-- {{ cons() }} -->
+<div class="edit-wrapper">
+  <h1>User Edit</h1>
+  <form>
+    <div class="form-group">
+      <label for="user-name">User Name</label>
+      <input
+        #name
+        type="text"
+        class="form-control"
+        id="Username"
+        placeholder=""
+        [value]="userData.name"
+      />
+    </div>
+    <label for="options">Role</label>
+    <select #role class="form-control" id="options" [value]="userData.role">
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+    </select>
+    <div class="form-group">
+      <label for="Email">Email address</label>
+      <input
+        #email
+        type="email"
+        class="form-control"
+        id="Email"
+        placeholder="Email address"
+        [value]="userData.email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="Email">Phone</label>
+      <input
+        #phone
+        type="text"
+        class="form-control"
+        id="Phone"
+        placeholder="Phone"
+        [value]="userData.phonenumber"
+      />
+    </div>
+    <label for="options">Status</label>
+    <select
+      #active
+      class="form-control"
+      id="options"
+      [value]="userData.isActive"
+    >
+      <option value="true">Active</option>
+      <option value="false">Deactive</option>
+    </select>
+    <!-- <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="exampleRadios"
+        id="exampleRadios1"
+        value="option1"
+        checked
+      />
+      <label class="form-check-label" for="exampleRadios1"> Active </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="exampleRadios"
+        id="exampleRadios2"
+        value="option2"
+      />
+      <label class="form-check-label" for="exampleRadios2"> Deactive </label>
+    </div> -->
+  </form>
+  <button
+    (click)="
+      submit(name.value, role.value, email.value, phone.value, active.value)
+    "
+    class="btn btn-primary mt-3"
+  >
+    Submit
+  </button>
+</div>

@@ -1,0 +1,121 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  height: auto;
+  width: auto;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  background-color: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.form-control:focus {
+  background-color: #555;
+  color: #fff;
+  border-color: #777;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.text-danger {
+  color: #ff5555 !important;
+}
+
+.text-green-600 {
+  color: #66ff66 !important;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+button {
+  /* display: block;  */
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+input:focus + label,
+select:focus + label {
+  color: white;
+}
+/* input:invalid {
+  outline: 2px solid red;
+} */
+/* input:required {
+  outline: 2px solid #8c8c8c;
+} */
+
+input:focus,
+select:focus {
+  outline: 2px solid white;
+}
+
+/* input:valid {
+  outline: 2px solid green;
+} */
+
+/* input:required + label {
+  color: blue;
+}
+input:valid + label {
+  color: yellow;
+} */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  outline: 2px solid red;
+}
+
+input.ng-valid,
+select.ng-valid {
+  outline: 2px solid green;
+}
+
+input.ng-valid + label,
+select.ng-valid + label {
+  color: green;
+}
+input.ng-invalid.ng-touched + span + label,
+select.ng-invalid.ng-touched + span + label {
+  color: red;
+}
+input.ng-invalid.ng-touched + label,
+select.ng-invalid.ng-touched + label {
+  color: red;
+}

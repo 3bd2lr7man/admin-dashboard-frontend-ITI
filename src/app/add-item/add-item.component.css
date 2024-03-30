@@ -1,0 +1,58 @@
+  .wrapper{
+    color: white;
+    max-width:30vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+  .details {
+    border-radius: 15px; 
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .title h2 {
+    color: #ffffff;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form label {
+    color: #ffffff;
+  }
+  
+  .item-name,
+  .item-description,
+  .item-price,
+  .item-quantity {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); 
+  }
+  
+  
+  .save {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a4046;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save:hover {
+    background-color: #4a5056;
+  }
+  
